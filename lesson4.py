@@ -53,4 +53,60 @@ def add_one(num) :
     print(total)
     return add_one(total) 
 
-add_one(0)
+# add_one(0)
+
+
+
+name = "global name"
+
+def name1 ():
+   name = "name1"
+   print(name)
+
+
+def name2 ():
+   global name
+   name = "chnage name"
+
+# name1()
+# name2()
+# print(name)
+
+
+  
+
+def func1 ():
+  name = "hossein"
+  def func2():
+    nonlocal name
+    name = "imani"
+  func2()
+  return name
+
+
+# print(func1())
+
+
+ 
+def parent_func (player):
+   coins = 3
+
+   def play_game():
+      nonlocal coins
+      coins -= 1
+      if(coins < 0):
+        print(f"{player} do not have chance")
+        return
+      print(f"{player} has {coins} left")
+
+
+   return play_game
+
+
+user1 = parent_func("hossein")
+user2 = parent_func("asra")
+user1()
+user1()
+user2()
+user1()
+user1()

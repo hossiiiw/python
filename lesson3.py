@@ -69,3 +69,27 @@ print(copy_list2 , copy_list3)
 
 copy_list4 = number[:]
 print(copy_list4)
+
+
+student = {
+  "name" : "hossein",
+  "age" : "24",
+  "gender" : "male"
+}
+
+
+print(student["name"])
+print(student.get("age"))
+
+
+test = dict (name = "asra" , age = "16")
+student["age"] = "25"
+student["newfield"] = "test"
+student.update({
+  "birthday" : "1381"
+})
+student.pop("newfield")
+student.popitem()
+print(test)
+print(test["name"])
+print(student)
